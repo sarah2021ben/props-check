@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/Profile";
 
 function App() {
+  const handleName = (fullName) => {
+    alert(fullName);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+        fullName="BENKANOUN Sarah"
+        bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae quam ut sem tempor vestibulum sed eget enim. Duis nisi ante, consectetur vitae malesuada auctor, vehicula quis dui."
+        profession="web developper"
+        handleName={handleName}
+      >
+        {" "}
+        <img src="/photo.jpg" alt="me" />{" "}
+      </Profile>
     </div>
   );
 }
